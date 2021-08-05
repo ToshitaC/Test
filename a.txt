@@ -1,0 +1,105 @@
+vdvbdbnbnfn
+
+Forloop
+
+#!/bin/bash -x
+
+for (( counter=1; counter<=5; counter++ ))
+do
+        echo -n "$counter"
+done
+printf "\n"
+
+for loop Wages
+#!/bin/bash -x
+
+isPartTime=1;
+isFullTime=2;
+totalSalary=0;
+empRatePerHr=20;
+numWorkingDays=20;
+
+for (( day=1; day<=$numWorkingDays; day++ ))
+do
+        empCheck=$((RANDOM%3));
+                case $empCheck in
+                        $isFullTime)
+                                empHrs=8
+                                ;;
+                        $isPartTime)
+                                empHrs=4
+                                ;;
+                        *)
+                               esac
+
+                salary=$(($empHrs*$empRatePerHr));
+                totalSalary=$(($totalSalary+$salary));
+done
+
+WHileloop
+#!/bin/bash -x
+count=1
+while [ $count -le 3 ]
+do
+        echo $count
+        ((count++))
+done
+
+
+Whileloopwages
+#!/bin/bash -x
+
+#Constants for the programs
+
+IS_PART_TIME=1;
+IS_FULL_TIME=2;
+MAX_HRS_IN_MONTH=10;
+EMP_RATE_PER_HR=20;
+NUM_WORKING_DAYS=20;
+
+totalEmpHr=0;
+totalWorkingDays=0;
+
+while [[ $totalEmpHrs -lt $MAX_HRS_IN_MONTH &&
+        $totalWorkingDays -lt $NUM_WORKING_DAYS ]]
+do
+        ((totalWorkingDays++))
+        empCheck=$((RANDOM%3));
+        case $empCheck in
+                $IS_FULL_TIME)
+                        empHrs=8
+                        ;;
+                $IS_PART_TIME)
+             
+     empHrs=4
+                        ;;
+                *)
+                        empHrs=0
+                        ;;
+        esac
+
+        totalEmpHrs=$(($totalEmpHrs+$empHrs))
+
+done
+
+totalSalary=$(($totalEmpHrs+$EMP_RATE_PER_HR));
+
+Function
+
+#!bin/bash -x
+
+function myfunc() {
+  echo $1
+}
+result="$( myfunc $((RANDOM%2)) )"
+if [$result -eq 1]
+then
+  echo "success"
+else
+  echo "failure"
+fi
+
+FUNCTIONWAGES
+
+
+
